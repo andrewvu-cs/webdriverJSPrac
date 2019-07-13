@@ -15,6 +15,7 @@ let driver = new webdriver.Builder()
 // traverses you to a page
 driver.get("https://library-app.firebaseapp.com/");
 
+//Finding element(s)
 driver.findElement(By.css('input'))
     .then(el =>{
         console.log("success " + el);
