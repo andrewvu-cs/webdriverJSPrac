@@ -52,7 +52,10 @@ driver.get("https://library-app.firebaseapp.com/");
 
 driver.findElement(By.css('input')).sendKeys("test@test.com");
 driver.findElement(By.css('.btn-lg')).click();
+
+//Should wait for a specified amount of time in ms
+driver.sleep(1000);
 driver.findElement(By.css('.alert-success')).getText()
     .then(txt => {
         console.log("element's text: " + txt);
-    })
+    });
