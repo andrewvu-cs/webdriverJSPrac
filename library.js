@@ -15,20 +15,12 @@ let driver = new webdriver.Builder()
 // traverses you to a page
 driver.get("https://library-app.firebaseapp.com/");
 
-//Finding element(s)
-driver.findElement(By.css('input'))
-    .then(el =>{
-        console.log("success " + el);
-    } );
-driver.findElement(By.css('.btn-lg'))
-    .then(el => {
-        console.log("found the button " + el);
+driver.findElement(By.css('input'));
+driver.findElement(By.css('btn-lg')).getText()
+    .then(txt => {
+        console.log("The text of the button is: " + txt );
     });
-// driver.findElement(By.css('.alert-success'));
-driver.findElements(By.css('nav li'))
-    .then(array => {
-        console.log("Found the elements " + array);
-    });
+driver.findElements(By.css('nav li'));
 
 driver.sleep(10000);
 // driver.quit();
