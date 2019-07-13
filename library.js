@@ -15,47 +15,10 @@ let driver = new webdriver.Builder()
 // traverses you to a page
 driver.get("https://library-app.firebaseapp.com/");
 
-// driver.findElement(By.css('input'));
-// driver.findElement(By.css('.btn-lg')).getText()
-//     .then(txt => {
-//         console.log("The text of the button is: " + txt );
-//     });
-
-// //Find the elements, grabs them all in the array, then map each single element getText
-// driver.findElements(By.css('nav li'))
-//     .then(elements => {
-//         elements.map(el => {
-//             el.getText()
-//                 .then(txt => {
-//                     console.log("the text of the navbar element is: " + txt);
-//                 });
-//         });
-//     });
-
-// driver.sleep(10000);
-// // driver.quit();
-// setTimeout(() => {
-//     driver.quit();
-// }, 100);
-// await driver.quit();
-
-// driver.findElement(By.css('input')).sendKeys("test@test.com");
-// driver.findElements(By.css('nav li'))
-//     .then(elements => {
-//         elements.map(el => {
-//             el.getText().then(txt => {
-//                 console.log("The text of each element " + txt);
-//             })
-//         })
-//     })
-
-
-driver.findElement(By.css('input')).sendKeys("test@test.com");
+driver.findElement(By.css('input')).sendKeys("user@email.com");
 driver.findElement(By.css('.btn-lg')).click();
 
-//Should wait for a specified amount of time in ms
-driver.sleep(1000);
-driver.findElement(By.css('.alert-success')).getText()
+driver.findElement(By.css('alert-success')).getText()
     .then(txt => {
-        console.log("element's text: " + txt);
-    });
+        console.log("Alert text: " + txt);
+    })
