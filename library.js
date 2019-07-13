@@ -42,6 +42,7 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
     await driver.get('https://library-app.firebaseapp.com/');
     await driver.findElement(By.css('input')).sendKeys('user@user.com');
     await driver.findElement(By.css('.btn-lg')).click()
+    //Explicit wait
     await driver.wait(until.elementLocated({css: '.alert-success'}), 10000);
     await driver.findElement({css: '.alert-success'}).getText()
         .then(txt => {
@@ -52,6 +53,7 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
     //         console.log(txt);
     //     })
     // await driver.wait(until.titleIs('webdriver - Google Search'), 1000);
+    console.log("blah :D");
   } 
   finally {
       console.log("hi");
