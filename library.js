@@ -21,4 +21,4 @@ driver.findElement(By.css('.btn-lg')).click();
 driver.findElement(By.css('alert-success')).getText()
     .then(txt => {
         console.log("Alert text: " + txt);
-    })
+    });
